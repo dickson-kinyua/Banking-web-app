@@ -17,7 +17,7 @@ function App() {
         <div className="">
           <Header />
         </div>
-        <div className="flex flex-col gap-10 lg:flex-row">
+        <div className="flex flex-col gap-20 lg:flex-row">
           <div className="w-full lg:w-1/4">
             <FirstSection />
           </div>
