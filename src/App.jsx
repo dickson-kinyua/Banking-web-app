@@ -9,6 +9,7 @@ import { CardDetails } from "./Components/CardDetails";
 import { Investments } from "./Components/Investments";
 import { Deposits } from "./Components/Deposits";
 import { Exchange } from "./Components/Exchange";
+import { Copyright } from "./Components/Copyright";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Investments />
             <Deposits />
             <Exchange />
+            <Copyright />
           </div>
         </div>
       </div>

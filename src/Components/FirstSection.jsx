@@ -17,7 +17,7 @@ export const FirstSection = () => {
       <div className="bg-white rounded-2xl p-2">
         <div>
           <p className="font-semibold text-sm">Real estate loan</p>
-          <p className="font-bold text-xl md:text-2xl mt-1">-$ 113,920.00</p>
+          <p className="font-bold  md:text-2xl mt-1">-$ 113,920.00</p>
         </div>
         <div>
           <p className="mt-4 font-semibold text-sm">20 payments left</p>

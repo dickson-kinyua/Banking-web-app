@@ -5,12 +5,12 @@ export const Deposits = () => {
         <p className="font-semibold">Deposit for 8 Month</p>
         <p className="text-sm">Dec 11,2024</p>
       </div>
-      <div className="font-bold text-xl flex flex-row justify-between">
-        <p>$1318.73</p>
+      <div className="font-semibold text-xl flex flex-row justify-between">
+        <p>$ 1318.73</p>
         <p>9%</p>
       </div>
-      <div className="font-bold text-xl flex flex-row justify-between">
-        <p>$1437.30</p>
+      <div className="font-semibold text-xl flex flex-row justify-between">
+        <p>$ 1437.30</p>
         <p className="font-normal text-sm">Feb 15,29 days later</p>
       </div>
     </div>

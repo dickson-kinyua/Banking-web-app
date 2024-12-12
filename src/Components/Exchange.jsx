@@ -7,13 +7,13 @@ export const Exchange = () => {
       <div>
         <p>Exchange from</p>
         <div>
-          <p className="font-bold text-xl">$ 3,215.00</p>
+          <p className="font-semibold text-xl">$ 3,215.00</p>
         </div>
       </div>
       <div>
         <p>To</p>
         <div>
-          <p className="font-bold text-xl">£ 2,528.71</p>
+          <p className="font-semibold text-xl">£ 2,528.71</p>
         </div>
       </div>
     </div>
