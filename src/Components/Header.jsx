@@ -4,86 +4,64 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export const Header = () => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState("showMenu");
 
   const toggleMenu = () => {
-    if (showMenu !== false) {
-      setShowMenu(false);
+    if (showMenu !== "hideMenu") {
+      setShowMenu("hideMenu");
     } else {
-      setShowMenu(true);
+      setShowMenu("showMenu");
     }
   };
 
   const closeMenu = () => {
-    setShowMenu(false);
+    setShowMenu("hideMenu");
   };
 
+  const headerLinks = [
+    { name: "Home", link: "#" },
+    { name: "Transactions", link: "#" },
+    { name: "Payments", link: "#" },
+    { name: "Deposits", link: "#" },
+    { name: "Credits", link: "#" },
+    { name: "Archive", link: "#" },
+  ];
+
   return (
-    <div className="flex flex-row justify-between  font-bold text-gray-700">
-      <div className="w-auto md:w-1/4 ml-2">
-        <Link
-          to={"#"}
-          className="uppercase text-xl md:text-2xl tracking-tight font-extrabold"
-        >
-          Lines Bank
-        </Link>
-      </div>
-      <ul className="hidden md:flex flex-row md:gap-5 justify-between md:3/4 lg:w-1/2 ">
-        <li>
-          <Link to={"#"}>Home</Link>
-        </li>
-        <li>
-          <Link to={"#"}>Transactions</Link>
-        </li>
-        <li>
-          <Link to={"#"}>Payments</Link>
-        </li>
-        <li>
-          <Link to={"#"}>Deposits</Link>
-        </li>
-        <li>
-          <Link to={"#"}>Credits</Link>
-        </li>
-        <li>
-          <Link to={"#"}>Archive</Link>
-        </li>
-      </ul>
-      {showMenu && (
-        <ul className="flex flex-col gap-4 absolute top-0 left-0 right-0 h-svh w-svw bg-white p-4">
-          <FontAwesomeIcon
-            icon={faXmark}
-            className="text-2xl absolute right-2 top-2 text-gray-800 "
-            onClick={closeMenu}
-          />
-          <li>
-            <Link to={"#"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Transactions</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Payments</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Deposits</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Credits</Link>
-          </li>
-          <li>
-            <Link to={"#"}>Archive</Link>
-          </li>
+    <div className="flex flex-col justify-center font-bold text-gray-700 sticky top-0">
+      <div className="flex flex-row items-center justify-between">
+        <div className="w-auto md:w-1/4 ml-2">
+          <Link
+            to={"#"}
+            className="uppercase text-xl md:text-2xl tracking-tight font-extrabold text-red-600"
+          >
+            Lines Bank
+          </Link>
+        </div>
+        <ul className="hidden lg:flex flex-row md:gap-5 justify-between md:3/4 lg:w-1/2 ">
+          {headerLinks.map((link) => (
+            <li key={link}>{link.name}</li>
+          ))}
         </ul>
-      )}
-      <div className="hidden lg:flex flex-row justify-end w-1/4">
-        <p className="">Dickson Kinyua</p>
-        <img src="" alt="" />
+
+        <FontAwesomeIcon
+          icon={faBars}
+          className="lg:hidden"
+          onClick={toggleMenu}
+        />
       </div>
-      <FontAwesomeIcon
-        icon={faBars}
-        className="md:hidden"
-        onClick={toggleMenu}
-      />
+      <div className={showMenu}>
+        <ul className="flex flex-col gap-8 ">
+          {headerLinks.map((link) => (
+            <li key={link}>{link.name}</li>
+          ))}
+        </ul>
+        <FontAwesomeIcon
+          icon={faXmark}
+          className="text-2xl  text-gray-800 "
+          onClick={closeMenu}
+        />
+      </div>
     </div>
   );
 };

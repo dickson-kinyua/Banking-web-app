@@ -7,8 +7,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 export const CardDetails = () => {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 gap-4   mt-4 ">
-      <div className="flex flex-col gap-4 bg-white p-2 rounded-2xl">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-4 md:w-3/4 lg:w-full">
+      <div className="flex flex-col gap-4 bg-white p-2 rounded-xl">
         <div className="flex flex-col items-start">
           <FontAwesomeIcon icon={faCircleInfo} />
         </div>
@@ -19,7 +19,7 @@ export const CardDetails = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-col justify-between bg-white p-2 rounded-2xl">
+      <div className="flex flex-col justify-between bg-white p-2 rounded-xl">
         <div className="flex flex-col items-start">
           <FontAwesomeIcon icon={faCreditCard} />
         </div>
@@ -30,7 +30,7 @@ export const CardDetails = () => {
           </span>
         </div>
       </div>
-      <div className="flex flex-col gap-3 bg-white p-2 rounded-2xl">
+      <div className="flex flex-col gap-3 bg-white p-2 rounded-xl">
         <div className="flex flex-col items-start">
           <FontAwesomeIcon icon={faQrcode} />
         </div>
