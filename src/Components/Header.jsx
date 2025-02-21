@@ -4,7 +4,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 export const Header = () => {
-  const [showMenu, setShowMenu] = useState("showMenu");
+  const [showMenu, setShowMenu] = useState("hideMenu");
 
   const toggleMenu = () => {
     if (showMenu !== "hideMenu") {
