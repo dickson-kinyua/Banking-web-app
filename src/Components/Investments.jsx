@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const Investments = () => {
   return (
-    <div className="bg-white flex flex-col gap-3 p-3 rounded-2xl">
+    <div className="bg-white flex flex-col gap-3 p-3 rounded-sm">
       <div className="flex flex-row justify-between">
         <p className="font-bold">My Investments </p>
         <Link to={"#"} className="font-semibold underline">
@@ -19,13 +19,7 @@ export const Investments = () => {
           </div>
           <p className="text-green-950">+0.33%</p>
         </div>
-        <div className="flex flex-row justify-between">
-          <div>
-            {/* <FontAwesomeIcon icon={faAmazon} /> */}
-            <p className="font-semibold">Amazon</p>
-          </div>
-          <p className="text-red-800">-4.96%</p>
-        </div>
+
         <div className="flex flex-row justify-between">
           <div>
             <p className="font-semibold">Alcoa Corporation</p>

@@ -1,6 +1,6 @@
 export const Debit = () => {
   return (
-    <div className=" bg-Debit-bg text-white p-3 rounded-3xl mt-3 bg-cover bg-center bg-no-repeat bg-[url('bank.webp')]">
+    <div className=" bg-Debit-bg text-white p-3 rounded-sm mt-3 bg-cover bg-center bg-no-repeat bg-[url('bank.webp')] md:w-3/4 lg:w-full">
       <div className="flex flex-col gap-4">
         <h3 className="font-semibold text-2xl leading-6">
           Debit Card Under New <br className="sm:hidden" /> Terms and Conditions
